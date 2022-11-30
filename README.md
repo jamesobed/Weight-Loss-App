@@ -1,6 +1,6 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Weight-loss-App-A-fitness-Centric-App  
+The Weight-loss app has been developed keeping fitness as center foci. It complements a fitness regime to incubate a positive attitude towards exercise and general well-being. This project is for a frontend recruitment test for TeampApt to test see how well the candidate can translate designs to actual working
+HTML/CSS/Javascript i.e. a working web application and to promote a healthy lifestyle, exercise and generate awareness. To facilitate this, the app provides numerous features but it is just the front end without any backend or database attached.
 
 ## Available Scripts
 
