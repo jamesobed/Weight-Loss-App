@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
-
 import { FaPlay, FaBicycle } from "react-icons/fa";
 import step1 from "../assets/step1.png";
 import stp3 from "../assets/stp3.png";
@@ -74,8 +73,6 @@ const UsersDashboardCard = () => {
                   }}
                 />
               </div>
-              {/* <h2>{usercard.amount}</h2> */}
-              {/* <p className="py-2 mb-0">{usercard.caption}</p> */}
             </div>
           );
         })}
@@ -84,7 +81,7 @@ const UsersDashboardCard = () => {
 };
 export const HistoryCardGraph = () => {
   // eslint-disable-next-line
-  const [BMI, setBMI] = useState({
+  const [BMI] = useState({
     options: {
       stroke: {
         curve: "smooth",
@@ -140,12 +137,7 @@ export const HistoryCardGraph = () => {
       data-aos="fade-up"
       data-aos-anchor-placement="top-center"
     >
-      {/* <WorkOutCardStyles */}
-      {/* id="usersDashboard"
-        className="pt-5 pb-3 px-2 d-grid d-sm-flex justify-content-between"
-      > */}
       <div className="cardContaine" style={{ width: "100%", display: "flex" }}>
-        {/* <div id="usercard" className="py-3"> */}
         <div style={{ width: "20%" }} className="rightText">
           <div>
             <div>Weight</div>
@@ -154,13 +146,8 @@ export const HistoryCardGraph = () => {
               52,3 <sub id="submal">kg</sub>{" "}
             </h1>
           </div>
-          {/* </div> */}
         </div>
-        {/* <div
-          id="usercard"
-          className="py-3"
-          style={{ marginRight: "1%", zIndex: "0" }}
-        > */}
+
         <div style={{ width: "70%", marginLeft: "-4%" }}>
           <Chart
             options={BMI.options}
@@ -168,14 +155,13 @@ export const HistoryCardGraph = () => {
             type="line"
             width="100%"
           />
-          {/* </div> */}
         </div>
       </div>
-      {/* </WorkOutCardStyles> */}
     </ProductSectionCard>
   );
 };
 export const HistoryCard = () => {
+  // eslint-disable-next-line
   const [BMI, setBMI] = useState({
     options: {
       chart: {
@@ -212,8 +198,6 @@ export const HistoryCard = () => {
                   }}
                 />
               </div>
-              {/* <h2>{usercard.amount}</h2> */}
-              {/* <p className="py-2 mb-0">{usercard.caption}</p> */}
             </div>
           );
         })}
@@ -241,8 +225,6 @@ export const WeightCard = () => {
                   }}
                 />
               </div>
-              {/* <h2>{usercard.amount}</h2> */}
-              {/* <p className="py-2 mb-0">{usercard.caption}</p> */}
             </div>
           );
         })}
@@ -270,8 +252,6 @@ export const SleepCard = () => {
                   }}
                 />
               </div>
-              {/* <h2>{usercard.amount}</h2> */}
-              {/* <p className="py-2 mb-0">{usercard.caption}</p> */}
             </div>
           );
         })}
@@ -299,8 +279,6 @@ export const BMICard = () => {
                   }}
                 />
               </div>
-              {/* <h2>{usercard.amount}</h2> */}
-              {/* <p className="py-2 mb-0">{usercard.caption}</p> */}
             </div>
           );
         })}
