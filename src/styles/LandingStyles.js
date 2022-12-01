@@ -195,7 +195,7 @@ export const ProductSection = styled.div`
 `;
 
 export const WorkOutCard = styled.div`
-  display: flex;
+  top: 5%;
 `;
 export const ProductSectionHero = styled.div`
   background: linear-gradient(to right, gray, #cfaef6);
@@ -328,10 +328,10 @@ export const FooterStyle = styled.div`
   width: 100%;
   z-index: 100;
   margin-top: 10%;
-  background-color: #21334f;
+  background-color: #f2f3fa;
   /* padding: 3% 1% 1% 1%; */
   text-align: center;
-  color: #fff;
+  color: #3c3c40;
   font-weight: lighter;
   & .footerMenu {
     display: flex;

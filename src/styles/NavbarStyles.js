@@ -28,9 +28,16 @@ export const Nav = styled.div`
   justify-content: space-between;
   align-items: center;
   min-height: 96px;
-  background-color: #fff;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: #f2f3fa;
+  /* box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1); */
   padding: 0 10%;
+
+  & .nav-img {
+    width: 60px;
+    height: 50px;
+    margin: 0 0 0 2%;
+    border-radius: 50%;
+  }
   @media (max-width: 320px) {
     padding: 0 3%;
   }

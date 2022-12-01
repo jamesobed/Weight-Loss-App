@@ -1,15 +1,19 @@
 import React from "react";
 import {
-  Hero,
+  // Hero,
   ProductSection,
-  ProductSectionHero,
+  // ProductSectionHero,
   WorkOutCard,
 } from "../styles/LandingStyles";
-import { Navbar } from "../components/Landing/Navbar";
+import { Nav } from "../styles/NavbarStyles";
+import loginImg from "../assets/icon/loginImg.png";
+
+// import { Navbar } from "../components/Landing/Navbar";
 import { Footer } from "../components/Landing/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import UsersDashboardCard, { SingleCard } from "../components/WorkoutCard";
 
 export const LandingPage = () => {
   useEffect(() => {
@@ -17,30 +21,20 @@ export const LandingPage = () => {
   }, []);
   return (
     <div>
-      <Navbar landing />
+      {/* <Navbar landing /> */}
+      <Nav>
+        <h1>My Activity</h1>
+        <img className="nav-img" src={loginImg} alt="" />
+      </Nav>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
 
       {/* ABOUT SECTION */}
       <WorkOutCard>
-        <ProductSectionHero
-          id="product"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-center"
-        >
-          <div className="productDescription"></div>
-          <div className="productImage">
-            {/* <img src={rechargeImage} alt="" /> */}
-          </div>
-        </ProductSectionHero>
-        <ProductSectionHero
-          id="product"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-center"
-        >
-          <div className="productDescription"></div>
-          <div className="productImage">
-            {/* <img src={rechargeImage} alt="" /> */}
-          </div>
-        </ProductSectionHero>
+        <UsersDashboardCard />
       </WorkOutCard>
       <div
         className="displayText"
@@ -65,9 +59,11 @@ export const LandingPage = () => {
           {/* <img src={rechargeImage} alt="" /> */}
         </div>
       </ProductSection>
-      <Hero>
-        <div data-aos="fade-right" className="heroText"></div>
-      </Hero>
+      <SingleCard />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <Footer />
     </div>
   );
