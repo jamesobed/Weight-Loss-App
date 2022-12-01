@@ -1,6 +1,5 @@
 import React from "react";
 import stp3 from "../assets/stp3.png";
-import step1 from "../assets/step1.png";
 import step2 from "../assets/step2.png";
 
 import styled from "styled-components";
@@ -140,12 +139,12 @@ export const SingleCardStyle = styled.div`
   }
 `;
 const Usercards = [
-//   {
-//     id: 1,
-//     icon: step1,
-//     caption: "Users",
-//     amount: "7 579",
-//   },
+  //   {
+  //     id: 1,
+  //     icon: step1,
+  //     caption: "Users",
+  //     amount: "7 579",
+  //   },
   {
     id: 2,
     icon: step2,
