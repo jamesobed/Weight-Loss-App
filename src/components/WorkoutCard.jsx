@@ -1,6 +1,5 @@
 import React from "react";
 import stp3 from "../assets/stp3.png";
-import step1 from "../assets/step1.png";
 import step2 from "../assets/step2.png";
 
 import styled from "styled-components";
@@ -140,12 +139,12 @@ export const SingleCardStyle = styled.div`
   }
 `;
 const Usercards = [
-  {
-    id: 1,
-    icon: step1,
-    caption: "Users",
-    amount: "7 579",
-  },
+  //   {
+  //     id: 1,
+  //     icon: step1,
+  //     caption: "Users",
+  //     amount: "7 579",
+  //   },
   {
     id: 2,
     icon: step2,
@@ -153,7 +152,7 @@ const Usercards = [
     amount: "866",
   },
   {
-    id: 2,
+    id: 3,
     icon: stp3,
     caption: "Active Users",
     amount: "27",
@@ -189,6 +188,20 @@ const UsersDashboardCard = () => {
   );
 };
 export const SingleCard = () => {
+  return (
+    <SingleCardStyle
+      id="usersDashboard"
+      className="pt-5 pb-3 px-2 d-grid d-sm-flex justify-content-between"
+    >
+      <div id="usercard" className="py-3 px-3">
+        <FaBicycle className="social-icon" />
+        <h3>Muscle Builder</h3>
+        <FaPlay className="social-icon" />
+      </div>
+    </SingleCardStyle>
+  );
+};
+export const SimpleCard = () => {
   return (
     <SingleCardStyle
       id="usersDashboard"
