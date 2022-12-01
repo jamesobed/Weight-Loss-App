@@ -65,106 +65,34 @@ export const Hero = styled.div`
   }
 `;
 
-// ABOUT SECTION========================================
-export const AboutSection = styled.div`
-  display: flex;
-  padding: 60px 10%;
-  color: #03435f;
-
-  & .aboutDescription {
-    margin: -1% 2% 0 2%;
-    width: 40%;
-    & h2 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      line-height: 56px;
-      margin: 0 0 3% 0;
-    }
-    & small {
-      font-size: 1.1rem;
-      font-weight: lighter;
-    }
-  }
-  @media (max-width: 1024px) {
-    & .aboutDescription {
-      width: 100%;
-      & h2 {
-        font-size: 2rem;
-        line-height: 36px;
-      }
-    }
-  }
-`;
-export const SideIndicator = styled.div`
-  width: 10px;
-  max-width: 10px;
-  height: 100;
-  border: 2px solid red;
-  background-color: #de3d6d;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-`;
-
-export const AboutCardWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: space-between; */
-  gap: 45px;
-  padding: 0 10%;
-  color: #03435f;
-  justify-content: center;
-`;
-export const AboutCard = styled.div`
-  background-color: ${({ backgroundColor }) =>
-    backgroundColor ? backgroundColor : "#FFF1F3"};
-  padding: 25px;
-  /* width: 26%; */
-  width: 19em;
-  align-items: center;
-  & p {
-    font-weight: lighter;
-    line-height: 24px;
-    font-size: 14px;
-  }
-`;
-
 // PRODUCT SECTION========================================
 export const ProductSection = styled.div`
-  background: linear-gradient(to right, #464abd, #464abd);
+  background: linear-gradient(to right, #7769cf, #7769cf);
   margin: 3% 3%;
-  min-height: 40vh;
+  min-height: 10vh;
   border-radius: 24px;
   display: flex;
   /* flex-direction: row; */
   flex-wrap: wrap;
   color: #03435f;
-  justify-content: space-between;
-  & .productDescription {
-    width: 40%;
-    margin: 8%;
-    & h2 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      line-height: 56px;
-      margin: 0 0 3% 0;
-    }
-    & p {
-      font-weight: lighter;
-      line-height: 34px;
-      margin-bottom: 6%;
-    }
-  }
+  justify-content: center;
+  align-items: center;
+
   & .productImage {
-    align-self: end;
-    width: 40%;
-    min-width: 40%;
+    /* align-self: end; */
+    border-radius: 24px;
+    width: 100%;
+    object-fit: contain;
+    /* min-width: 40%; */
     margin-bottom: -0.3%;
+    /* margin-right: -0.3%; */
     & img {
-      width: 80%;
+      width: 100%;
+      border-radius: 2rem;
     }
     @media (max-width: 1024px) {
       & img {
-        width: 50%;
+        width: 100%;
       }
     }
   }
@@ -198,72 +126,7 @@ export const WorkOutCard = styled.div`
   top: 5%;
   overflow-x: scroll;
 `;
-export const ProductSectionHero = styled.div`
-  background: linear-gradient(to right, gray, #cfaef6);
-  /* margin: 7% 10%; */
-  min-height: 30vh;
-  border-radius: 24px;
-  z-index: 4;
-  display: flex;
-  flex-direction: column;
-  /* flex-wrap: wrap; */
-  color: #03435f;
-  /* justify-content: space-between; */
-  & .productDescription {
-    width: 40%;
-    margin: 8%;
-    & h2 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      line-height: 56px;
-      margin: 0 0 3% 0;
-    }
-    & p {
-      font-weight: lighter;
-      line-height: 34px;
-      margin-bottom: 6%;
-    }
-  }
-  & .productImage {
-    align-self: end;
-    width: 40%;
-    min-width: 40%;
-    margin-bottom: -0.3%;
-    & img {
-      width: 80%;
-    }
-    @media (max-width: 1024px) {
-      & img {
-        width: 50%;
-      }
-    }
-  }
-  @media (max-width: 280px) {
-    & .productDescription {
-      & h2 {
-        font-weight: 600;
-        font-size: 2rem;
-      }
-    }
-  }
-  @media (max-width: 1024px) {
-    & .productDescription {
-      width: 100%;
-      & h2 {
-        line-height: 46px;
-        text-align: center;
-        padding: 20px 0;
-      }
-    }
-    & .productImage {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin-bottom: 0%;
-    }
-  }
-`;
-
+// FOOTER SECTION========================================
 export const FooterStyle = styled.div`
   position: fixed;
   bottom: 0;
@@ -290,9 +153,10 @@ export const FooterStyle = styled.div`
   & .footerMenu .social-icon {
     cursor: pointer;
     font-size: 2.5rem;
+    color: #c8c8cc;
   }
   & .footerMenu .social-icon:hover {
-    color: #c8c8cc;
+    color: #212423;
     width: 300px;
     transition: width 2s, height 4s;
   }
