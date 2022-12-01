@@ -3,14 +3,17 @@ import { ProductSection, WorkOutCard } from "../styles/LandingStyles";
 import { Nav } from "../styles/NavbarStyles";
 import loginImg from "../assets/icon/loginImg.png";
 import chart from "../assets/chart.png";
-
+import { FaSpinner } from "react-icons/fa";
 import { Footer } from "../components/Landing/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import UsersDashboardCard, {
   SingleCard,
-  SimpleCard,
+  // BMICard,
+  // SleepCard,
+  // WeightCard,
+  HistoryCard,
 } from "../components/WorkoutCard";
 
 export const LandingPage = () => {
@@ -20,11 +23,33 @@ export const LandingPage = () => {
     AOS.init();
   }, []);
 
-  console.log(active);
   return (
     <div>
       {active === "chart" ? (
-        <SimpleCard />
+        <>
+          <Nav>
+            <div>
+              <h1>My Activity</h1>
+
+              <h2>Monday, 11 July</h2>
+            </div>
+            <FaSpinner
+              style={{
+                fontSize: "40px",
+                top: "-30px",
+              }}
+              className="social-icon"
+            />
+          </Nav>
+          <HistoryCard />
+          {/* <WeightCard /> */}
+          {/* <BMICard />
+          <SleepCard /> */}
+          <br />
+          <br />
+          <br />
+          <br />
+        </>
       ) : (
         <>
           <Nav>
