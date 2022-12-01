@@ -145,17 +145,17 @@ export const FooterStyle = styled.div`
     list-style-type: none;
     justify-content: center;
     margin: auto;
-    padding: 3%;
+    padding: 2%;
     margin: 0% 0;
     justify-content: space-between;
   }
 
-  & .footerMenu .social-icon {
+  & .foot-nav .footerMenu .social-icon {
     cursor: pointer;
     font-size: 2.5rem;
     color: #c8c8cc;
   }
-  & .footerMenu .social-icon:hover {
+  & .foot-nav .footerMenu .social-icon:hover {
     color: #212423;
     width: 300px;
     transition: width 2s, height 4s;
