@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import Chart from "react-apexcharts";
+
 import { FaPlay, FaBicycle } from "react-icons/fa";
 import step1 from "../assets/step1.png";
 import stp3 from "../assets/stp3.png";
@@ -7,6 +9,7 @@ import {
   SingleCardStyle,
   WorkOutCardi,
   WorkOutCardStyles,
+  ProductSectionCard,
 } from "../styles/LandingStyles";
 
 const Usercards = [
@@ -49,6 +52,7 @@ const History = [
     amount: "27",
   },
 ];
+
 const UsersDashboardCard = () => {
   return (
     <WorkOutCardi
@@ -78,7 +82,116 @@ const UsersDashboardCard = () => {
     </WorkOutCardi>
   );
 };
+export const HistoryCardGraph = () => {
+  // eslint-disable-next-line
+  const [BMI, setBMI] = useState({
+    options: {
+      stroke: {
+        curve: "smooth",
+      },
+      grid: {
+        show: false,
+        borderColor: "#90A4AE",
+        strokeDashArray: 0,
+        position: "back",
+        xaxis: {
+          lines: {
+            show: false,
+          },
+        },
+        yaxis: {
+          lines: {
+            show: false,
+          },
+        },
+        row: {
+          colors: undefined,
+          opacity: 0.5,
+        },
+        column: {
+          colors: undefined,
+          opacity: 0.5,
+        },
+        padding: {
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 30,
+        },
+      },
+      colors: ["#daf542", "#66DA26"],
+      chart: {
+        id: "basic-bar",
+      },
+      xaxis: {
+        categories: ["t", "w", "t", "f", "s", "s", "m"],
+      },
+    },
+    series: [
+      {
+        name: "series-1",
+        data: [400, 300, 600, 200, 500, 400, 700],
+      },
+    ],
+  });
+  return (
+    <ProductSectionCard
+      id="product"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+    >
+      {/* <WorkOutCardStyles */}
+      {/* id="usersDashboard"
+        className="pt-5 pb-3 px-2 d-grid d-sm-flex justify-content-between"
+      > */}
+      <div className="cardContaine" style={{ width: "100%", display: "flex" }}>
+        {/* <div id="usercard" className="py-3"> */}
+        <div style={{ width: "20%" }} className="rightText">
+          <div>
+            <div>Weight</div>
+
+            <h1>
+              52,3 <sub id="submal">kg</sub>{" "}
+            </h1>
+          </div>
+          {/* </div> */}
+        </div>
+        {/* <div
+          id="usercard"
+          className="py-3"
+          style={{ marginRight: "1%", zIndex: "0" }}
+        > */}
+        <div style={{ width: "70%", marginLeft: "-4%" }}>
+          <Chart
+            options={BMI.options}
+            series={BMI.series}
+            type="line"
+            width="100%"
+          />
+          {/* </div> */}
+        </div>
+      </div>
+      {/* </WorkOutCardStyles> */}
+    </ProductSectionCard>
+  );
+};
 export const HistoryCard = () => {
+  const [BMI, setBMI] = useState({
+    options: {
+      chart: {
+        id: "basic-bar",
+      },
+      xaxis: {
+        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+      },
+    },
+    series: [
+      {
+        name: "series-1",
+        data: [30, 40, 45, 50, 49, 60, 70, 91],
+      },
+    ],
+  });
   return (
     <WorkOutCardStyles
       id="usersDashboard"

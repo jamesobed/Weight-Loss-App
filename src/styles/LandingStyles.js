@@ -78,6 +78,94 @@ export const ProductSection = styled.div`
   justify-content: center;
   align-items: center;
 
+  & .py-2 {
+    margin: 0%;
+    border-radius: 1rem;
+    height: 100%;
+  }
+  & .productImage {
+    /* align-self: end; */
+    border-radius: 24px;
+    width: 100%;
+    object-fit: contain;
+    /* min-width: 40%; */
+    margin-bottom: -0.3%;
+    /* margin-right: -0.3%; */
+    & img {
+      width: 100%;
+      border-radius: 2rem;
+    }
+    @media (max-width: 1024px) {
+      & img {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 280px) {
+    & .productDescription {
+      & h2 {
+        font-weight: 600;
+        font-size: 2rem;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    & .productDescription {
+      width: 100%;
+      & h2 {
+        line-height: 46px;
+        text-align: center;
+        padding: 20px 0;
+      }
+    }
+    & .productImage {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 0%;
+    }
+  }
+`;
+export const ProductSectionCard = styled.div`
+  background: #fff;
+  margin: 3% 3%;
+  min-height: 10vh;
+  border-radius: 24px;
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  color: #03435f;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem, 2rem, 2rem, 2rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  & .py-3 {
+    background-color: #fff;
+    margin: 0%;
+    /* border-radius: 1rem; */
+    height: 100%;
+  }
+
+  & .cardContaine .rightText {
+    /* margin-top: 25%; */
+    background-color: #fff;
+    height: 100%;
+    margin-right: -3%;
+    padding-left: 4%;
+    padding-right: 1%;
+    vertical-align: middle;
+    justify-content: stretch;
+    align-items: flex-end;
+    text-align: right;
+    z-index: 10;
+  }
+  & .cardContaine .rightText {
+    #submal {
+      font-size: medium;
+      font-weight: 300;
+    }
+  }
   & .productImage {
     /* align-self: end; */
     border-radius: 24px;

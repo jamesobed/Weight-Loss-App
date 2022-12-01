@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import Chart from "react-apexcharts";
 import { ProductSection, WorkOutCard } from "../styles/LandingStyles";
 import { Nav } from "../styles/NavbarStyles";
 import loginImg from "../assets/icon/loginImg.png";
-import chart from "../assets/chart.png";
+// import chart from "../assets/chart.png";
 import { FaSpinner } from "react-icons/fa";
 import { Footer } from "../components/Landing/Footer";
 import AOS from "aos";
@@ -13,11 +14,61 @@ import UsersDashboardCard, {
   // BMICard,
   // SleepCard,
   // WeightCard,
-  HistoryCard,
+  HistoryCardGraph,
+  // HistoryCard,
 } from "../components/WorkoutCard";
 
 export const LandingPage = () => {
   const [active, setActive] = useState();
+  // eslint-disable-next-line
+  const [BMI, setBMI] = useState({
+    options: {
+      grid: {
+        show: true,
+        borderColor: "#fff",
+        strokeDashArray: 0,
+        position: "back",
+        xaxis: {
+          lines: {
+            show: false,
+          },
+        },
+        yaxis: {
+          lines: {
+            show: false,
+          },
+        },
+        row: {
+          colors: undefined,
+          opacity: 0.5,
+        },
+        column: {
+          colors: undefined,
+          opacity: 0.5,
+        },
+        padding: {
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 20,
+        },
+      },
+      colors: ["#daf542", "#66DA26"],
+      chart: {
+        id: "basic-bar",
+        background: "#7769cf",
+      },
+      xaxis: {
+        categories: ["t", "w", "t", "f", "s", "s", "m"],
+      },
+    },
+    series: [
+      {
+        name: "series-1",
+        data: [10, 9, 5, 7, 8, 4, 6],
+      },
+    ],
+  });
 
   useEffect(() => {
     AOS.init();
@@ -41,7 +92,7 @@ export const LandingPage = () => {
               className="social-icon"
             />
           </Nav>
-          <HistoryCard />
+          <HistoryCardGraph />
           {/* <WeightCard /> */}
           {/* <BMICard />
           <SleepCard /> */}
@@ -77,7 +128,7 @@ export const LandingPage = () => {
             <h3>Goal for week</h3>
             <p>42/54</p>
           </div>
-          <ProductSection
+          {/* <ProductSection
             id="product"
             data-aos="fade-up"
             data-aos-anchor-placement="top-center"
@@ -85,6 +136,23 @@ export const LandingPage = () => {
             <div className="productImage">
               <img src={chart} alt="" />
             </div>
+          </ProductSection> */}
+          <ProductSection
+            id="product"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+          >
+            <div id="usercard" className="py-2" style={{ width: "70%" }}>
+              <div style={{ width: "100%" }}>
+                <Chart
+                  options={BMI.options}
+                  series={BMI.series}
+                  type="bar"
+                  width="100%"
+                />
+              </div>
+            </div>
+            {/* </WorkOutCardStyles> */}
           </ProductSection>
           <div
             className="displayText"
