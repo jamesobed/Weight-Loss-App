@@ -73,8 +73,6 @@ const UsersDashboardCard = () => {
                   }}
                 />
               </div>
-              {/* <h2>{usercard.amount}</h2> */}
-              {/* <p className="py-2 mb-0">{usercard.caption}</p> */}
             </div>
           );
         })}
@@ -200,8 +198,6 @@ export const HistoryCard = () => {
                   }}
                 />
               </div>
-              {/* <h2>{usercard.amount}</h2> */}
-              {/* <p className="py-2 mb-0">{usercard.caption}</p> */}
             </div>
           );
         })}
@@ -229,8 +225,6 @@ export const WeightCard = () => {
                   }}
                 />
               </div>
-              {/* <h2>{usercard.amount}</h2> */}
-              {/* <p className="py-2 mb-0">{usercard.caption}</p> */}
             </div>
           );
         })}
@@ -258,7 +252,7 @@ export const SleepCard = () => {
                   }}
                 />
               </div>
-             </div>
+            </div>
           );
         })}
     </WorkOutCardStyles>
