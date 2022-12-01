@@ -131,7 +131,7 @@ export const AboutCard = styled.div`
 // PRODUCT SECTION========================================
 export const ProductSection = styled.div`
   background: linear-gradient(to right, #464abd, #464abd);
-  margin: 7% 10%;
+  margin: 3% 3%;
   min-height: 40vh;
   border-radius: 24px;
   display: flex;
@@ -196,6 +196,7 @@ export const ProductSection = styled.div`
 
 export const WorkOutCard = styled.div`
   top: 5%;
+  overflow-x: scroll;
 `;
 export const ProductSectionHero = styled.div`
   background: linear-gradient(to right, gray, #cfaef6);
@@ -263,72 +264,14 @@ export const ProductSectionHero = styled.div`
   }
 `;
 
-// TESTIMONIAL SECTION========================================
-export const TestimonialSection = styled.div`
-  color: #03435f;
-  font-size: larger;
-  padding: 0% 10%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  & p {
-    font-size: 1.1rem;
-    font-weight: lighter;
-    width: 100%;
-    margin: 0 32%;
-    line-height: 24px;
-  }
-
-  @media (max-width: 1024px) {
-    & p {
-      margin: 0;
-    }
-  }
-`;
-
-export const TestimonialCardWrapper = styled.div`
-  padding: 0% 5%;
-  display: flex;
-  margin-top: 35px;
-  .rec.rec-arrow {
-    background-color: #f5f5f5;
-  }
-
-  .rec.rec-arrow:hover {
-    background-color: #bcb8b8 !important;
-  }
-`;
-export const TestimonialCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 9% 8%;
-  margin: 10px;
-  min-height: 15rem;
-  height: 18rem;
-  /* border:2px solid red; */
-  background-color: ${({ backgroundColor }) =>
-    backgroundColor ? backgroundColor : "#F5F5F5"};
-  & h3 {
-    margin: 5px 0 20px 0;
-  }
-  & p {
-    /* font-size: 0.5rem; */
-    font-weight: lighter;
-    width: 100%;
-    line-height: 26px;
-    margin: 0;
-  }
-`;
-// FOOTER SECTION========================================
-
 export const FooterStyle = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
   z-index: 100;
   margin-top: 10%;
-  background-color: #f2f3fa;
+  background-color: #fff;
+  border-radius: 3rem;
   /* padding: 3% 1% 1% 1%; */
   text-align: center;
   color: #3c3c40;
@@ -349,7 +292,7 @@ export const FooterStyle = styled.div`
     font-size: 2.5rem;
   }
   & .footerMenu .social-icon:hover {
-    color: #de3d6d;
+    color: #c8c8cc;
     width: 300px;
     transition: width 2s, height 4s;
   }

@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { FaPlay, FaBicycle } from "react-icons/fa";
 export const WorkOutCard = styled.div`
+  // make my display grid and scroll in row
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  flex-direction: column;
-  align-items: flex-start;
+  grid-gap: 1rem;
+  overflow-y: scroll;
+
   padding: 3%;
   gap: 40px;
 
-  #userDashboard {
+  */ #userDashboard {
     width: 100%;
   }
   #usercard {
@@ -68,7 +71,7 @@ export const SingleCardStyle = styled.div`
   }
   #usercard {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 230px;
     min-width: 22%;
     word-wrap: break-word;
@@ -80,8 +83,12 @@ export const SingleCardStyle = styled.div`
     justify-content: center;
     align-items: center;
 
-    h2 {
+    h3 {
       color: #213f7d;
+      display: flex;
+      width: 40%;
+      margin-left: 5%;
+      margin-right: 60%;
       font-weight: 600;
       font-family: "Work Sans", sans-serif;
     }
@@ -112,6 +119,11 @@ export const SingleCardStyle = styled.div`
     .body-pd {
       padding-left: calc(var(--sidenav-width) + 2rem);
     }
+  }
+
+  & #usercard .social-icon {
+    width: 306px;
+    height: 46px;
   }
 `;
 const Usercards = [
@@ -156,11 +168,9 @@ export const SingleCard = () => {
       className="pt-5 pb-3 px-2 d-grid d-sm-flex justify-content-between"
     >
       <div id="usercard" className="py-3 px-3">
-        <div style={{ width: "40", height: "40" }}>
-          <img src={"usercard.icon"} alt="" />
-        </div>
-        <h2>{"usercard.amoun"}</h2>
-        <p className="py-2 mb-0">{"usercard.caption"}</p>
+        <FaBicycle className="social-icon" />
+        <h3>Muscle Builder</h3>
+        <FaPlay className="social-icon" />
       </div>
     </SingleCardStyle>
   );

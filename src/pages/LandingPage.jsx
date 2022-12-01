@@ -31,7 +31,6 @@ export const LandingPage = () => {
       <br />
       <br />
       <br />
-
       {/* ABOUT SECTION */}
       <WorkOutCard>
         <UsersDashboardCard />
@@ -43,11 +42,11 @@ export const LandingPage = () => {
           justifyContent: "space-between",
           width: "94%",
           marginLeft: "4%",
-          marginRight: "4%",
+          marginRight: "6%",
         }}
       >
         <h3>Goal for week</h3>
-        <h3>42/54</h3>
+        <p>42/54</p>
       </div>
       <ProductSection
         id="product"
@@ -59,11 +58,24 @@ export const LandingPage = () => {
           {/* <img src={rechargeImage} alt="" /> */}
         </div>
       </ProductSection>
+      <div
+        className="displayText"
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "94%",
+          marginLeft: "4%",
+          marginRight: "6%",
+        }}
+      >
+        <h3>Trending workouts</h3>
+        <p>see all</p>
+      </div>{" "}
       <SingleCard />
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
+      <br />
       <Footer />
     </div>
   );

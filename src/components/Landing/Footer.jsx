@@ -2,10 +2,10 @@ import React from "react";
 import { FooterStyle } from "../../styles/LandingStyles";
 import {
   FaHome,
-  FaPeopleArrows,
   FaWhatsapp,
   FaChartArea,
   FaPlus,
+  FaPersonBooth
 } from "react-icons/fa";
 export const Footer = () => {
   return (
@@ -24,7 +24,7 @@ export const Footer = () => {
           <FaWhatsapp className="social-icon" />
         </div>
         <div>
-          <FaPeopleArrows className="social-icon" />
+          <FaPersonBooth className="social-icon" />
         </div>
       </div>
     </FooterStyle>

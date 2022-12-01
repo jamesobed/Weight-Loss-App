@@ -31,10 +31,11 @@ export const Nav = styled.div`
   background-color: #f2f3fa;
   /* box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1); */
   padding: 0 10%;
+  margin-top: 2rem;
 
   & .nav-img {
-    width: 60px;
-    height: 50px;
+    width: 100px;
+    height: 80px;
     margin: 0 0 0 2%;
     border-radius: 50%;
   }
