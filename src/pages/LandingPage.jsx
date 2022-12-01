@@ -1,12 +1,8 @@
 import React from "react";
-import {
-  // Hero,
-  ProductSection,
-  // ProductSectionHero,
-  WorkOutCard,
-} from "../styles/LandingStyles";
+import { ProductSection, WorkOutCard } from "../styles/LandingStyles";
 import { Nav } from "../styles/NavbarStyles";
 import loginImg from "../assets/icon/loginImg.png";
+import chart from "../assets/chart.png";
 
 // import { Navbar } from "../components/Landing/Navbar";
 import { Footer } from "../components/Landing/Footer";
@@ -53,9 +49,8 @@ export const LandingPage = () => {
         data-aos="fade-up"
         data-aos-anchor-placement="top-center"
       >
-        <div className="productDescription"></div>
         <div className="productImage">
-          {/* <img src={rechargeImage} alt="" /> */}
+          <img src={chart} alt="" />
         </div>
       </ProductSection>
       <div

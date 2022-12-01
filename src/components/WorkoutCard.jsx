@@ -1,4 +1,8 @@
 import React from "react";
+import stp3 from "../assets/stp3.png";
+import step1 from "../assets/step1.png";
+import step2 from "../assets/step2.png";
+
 import styled from "styled-components";
 import { FaPlay, FaBicycle } from "react-icons/fa";
 export const WorkOutCard = styled.div`
@@ -93,7 +97,10 @@ export const SingleCardStyle = styled.div`
       font-family: "Work Sans", sans-serif;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 468px) {
+    padding-left: 5%;
+    padding-right: 5%;
+
     #usersDashboard {
       width: 100%;
       background-color: #fff;
@@ -109,6 +116,12 @@ export const SingleCardStyle = styled.div`
       img {
         display: none;
       }
+    }
+    h3 {
+      font-weight: 400;
+      width: 40%;
+      margin-left: 3%;
+      margin-right: 50%;
     }
   }
 
@@ -129,15 +142,21 @@ export const SingleCardStyle = styled.div`
 const Usercards = [
   {
     id: 1,
-    icon: "../Users/users.svg",
+    icon: step1,
     caption: "Users",
-    amount: "2,453",
+    amount: "7 579",
   },
   {
     id: 2,
-    icon: "../Users/active-users.svg",
+    icon: step2,
     caption: "Active Users",
-    amount: "2,453",
+    amount: "866",
+  },
+  {
+    id: 2,
+    icon: stp3,
+    caption: "Active Users",
+    amount: "27",
   },
 ];
 const UsersDashboardCard = () => {
@@ -150,11 +169,19 @@ const UsersDashboardCard = () => {
         Usercards.map((usercard) => {
           return (
             <div id="usercard" className="py-3 px-3" key={usercard.id}>
-              <div style={{ width: "40", height: "40" }}>
-                <img src={usercard.icon} alt="" />
+              <div style={{ width: "50%" }}>
+                <img
+                  src={usercard.icon}
+                  alt=""
+                  style={{
+                    width: "100%",
+                    objectFit: "contain",
+                    margin: "0.03%",
+                  }}
+                />
               </div>
-              <h2>{usercard.amount}</h2>
-              <p className="py-2 mb-0">{usercard.caption}</p>
+              {/* <h2>{usercard.amount}</h2> */}
+              {/* <p className="py-2 mb-0">{usercard.caption}</p> */}
             </div>
           );
         })}
