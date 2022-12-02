@@ -14,6 +14,7 @@ export const Footer = ({ setActive }) => {
 
   const handSetActive = () => {
     setActive(activeTab);
+    console.log(activeTab);
   };
   return (
     <FooterStyle>
@@ -109,7 +110,8 @@ export const Footer = ({ setActive }) => {
         >
           <FaPlus
             style={{
-              color: activeTab === "add" ? "#213f7d" : "#c4c4c4",
+              // color: activeTab === "add" ? "#213f7d" : "#c4c4c4",
+              background: "#213f7d",
               fontSize: "20px",
             }}
             className="social-icon"

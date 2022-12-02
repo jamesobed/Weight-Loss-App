@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
-import { FaPlay, FaBicycle } from "react-icons/fa";
+import { FaPlay, FaBiking } from "react-icons/fa";
 import step1 from "../assets/step1.png";
 import stp3 from "../assets/stp3.png";
 import step2 from "../assets/step2.png";
@@ -272,7 +272,7 @@ export const SingleCard = () => {
       className="pt-5 pb-3 px-2 d-grid d-sm-flex justify-content-between"
     >
       <div id="usercard" className="py-3 px-3">
-        <FaBicycle className="social-icon" />
+        <FaBiking className="social-icon" />
         <h3>Muscle Builder</h3>
         <FaPlay className="social-icon" />
       </div>

@@ -513,3 +513,93 @@ export const SingleCardStyleSmall = styled.div`
     height: 46px;
   }
 `;
+
+// ADD MODAL SECTION========================================
+export const AddModalStyles = styled.div`
+  padding: 7%;
+  gap: 40px;
+  background-color: #abc;
+  height: "120px";
+  border: 1px solid rgba(33, 63, 125, 0.06);
+
+  /* background-color: #f2f3fa; */
+  #userDashboard {
+    width: 100%;
+  }
+  #usercard {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    min-width: 22%;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 24px;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1%;
+
+    h3 {
+      color: #213f7d;
+      display: flex;
+      width: 40%;
+      margin-left: 5%;
+      /* margin-right: 60%; */
+      font-weight: 600;
+      font-family: "Work Sans", sans-serif;
+    }
+    h1 {
+      color: #213f7d;
+      display: flex;
+      /* width: 100%; */
+      margin-left: 5%;
+      /* margin-right: 50%; */
+      font-weight: 800;
+      font-size: x-large;
+      font-family: "Work Sans", sans-serif;
+    }
+  }
+  @media (max-width: 468px) {
+    padding-left: 5%;
+    padding-right: 5%;
+
+    #usersDashboard {
+      width: 100%;
+      background-color: #fff;
+      display: grid;
+      grid-template-columns: 47% 47%;
+      #usercard {
+        margin-bottom: 1rem;
+      }
+    }
+    th {
+      font-size: 12px;
+      align-items: center;
+      img {
+        display: none;
+      }
+    }
+    h3 {
+      font-weight: 400;
+      width: 40%;
+      margin-left: 3%;
+      margin-right: 50%;
+    }
+  }
+
+  .body-pd {
+    padding-top: 3rem;
+  }
+  @media (min-width: 768px) {
+    .body-pd {
+      padding-left: calc(var(--sidenav-width) + 2rem);
+    }
+  }
+
+  & #usercard .social-icon {
+    width: 306px;
+    height: 46px;
+  }
+`;

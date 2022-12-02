@@ -15,7 +15,7 @@ import UsersDashboardCard, {
   SleepCardBar,
   BMICardBar,
 } from "../components/WorkoutCard";
-
+import { AddModal } from "../components/AddModal";
 export const LandingPage = () => {
   const [active, setActive] = useState();
   // eslint-disable-next-line
@@ -97,6 +97,10 @@ export const LandingPage = () => {
           <br />
           <br />
           <br />
+        </>
+      ) : active === "plus" ? (
+        <>
+          <AddModal />
         </>
       ) : (
         <>

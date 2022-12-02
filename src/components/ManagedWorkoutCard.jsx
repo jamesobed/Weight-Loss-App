@@ -2,13 +2,9 @@
 import React, { useState } from "react";
 // eslint-disable-next-line
 import Chart from "react-apexcharts";
-import {
-  FaPersonBooth,
-  FaGgCircle,
-  FaLessThan,
-} from "react-icons/fa";
+import { FaPersonBooth, FaGgCircle, FaLessThan } from "react-icons/fa";
 import { Nav } from "../styles/NavbarStyles";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import {
   SingleCardStyle,
@@ -16,6 +12,7 @@ import {
   ProductSectionCard,
   SingleCardStyleSmall,
 } from "../styles/LandingStyles";
+import Button, { Button1 } from "../styles/ButtonStyles";
 
 export const UsersDashboardCard = () => {
   return (
@@ -144,6 +141,11 @@ export const SingleCardSet = ({ input }) => {
   );
 };
 function ManagedWorkoutCard() {
+  const navigate = useNavigate();
+  const handleBtnClick = () => {
+    // navigate to '/'
+    navigate("/");
+  };
   return (
     <div>
       <>
@@ -172,9 +174,85 @@ function ManagedWorkoutCard() {
             className="social-icon"
           />
         </Nav>
+
         <div className="flexTop" style={{ display: "flex", width: "100%" }}>
-          <SingleCard input={["Female", "fff"]} />
-          <SingleCard input={["Male", "fff"]} />
+          <Button1
+            type="submit"
+            borderRadius="24px"
+            height="80px"
+            width="90%"
+            style={{
+              marginLeft: "5%",
+              marginRight: "5%",
+              marginBottom: "1.5rem",
+              alignItems: "center",
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+            onClick={handleBtnClick}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                width: "100%",
+              }}
+            >
+              <h2
+                style={{
+                  color: "#213f7d",
+                  alignItems: "center",
+                  textAlign: "center",
+                  margin: "1%",
+                }}
+              >
+                Male
+              </h2>
+            </div>
+          </Button1>
+          <Button1
+            id="femalebtn"
+            type="submit"
+            borderRadius="24px"
+            height="80px"
+            width="90%"
+            style={{
+              marginLeft: "5%",
+              marginRight: "5%",
+              marginBottom: "1.5rem",
+              alignItems: "center",
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+            onClick={() => {
+              // eslint-disable-next-line
+              document.getElementById("femalebtn").style.border =
+                "1px solid #579428";
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                width: "100%",
+              }}
+            >
+              <h2
+                style={{
+                  color: "#213f7d",
+                  alignItems: "center",
+                  textAlign: "center",
+                  margin: "1%",
+                }}
+              >
+                Female
+              </h2>
+            </div>
+          </Button1>
         </div>
 
         <div
@@ -184,7 +262,20 @@ function ManagedWorkoutCard() {
           <SingleCardSet input={[21, 300, "Age"]} />
           <SingleCardSet input={[173, 300, "Height"]} />
         </div>
-        <SingleCard input={["Save", "7769cf", "fff"]} />
+        <Button
+          type="submit"
+          borderRadius="24px"
+          height="80px"
+          width="90%"
+          style={{
+            marginLeft: "5%",
+            marginRight: "5%",
+            marginBottom: "1.5rem",
+          }}
+          onClick={handleBtnClick}
+        >
+          Save
+        </Button>
       </>
     </div>
   );
