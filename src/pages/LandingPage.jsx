@@ -11,11 +11,9 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import UsersDashboardCard, {
   SingleCard,
-  // BMICard,
-  // SleepCard,
-  // WeightCard,
-  HistoryCardGraph,
-  // HistoryCard,
+  WeightCardLine,
+  SleepCardBar,
+  BMICardBar,
 } from "../components/WorkoutCard";
 
 export const LandingPage = () => {
@@ -92,10 +90,9 @@ export const LandingPage = () => {
               className="social-icon"
             />
           </Nav>
-          <HistoryCardGraph />
-          {/* <WeightCard /> */}
-          {/* <BMICard />
-          <SleepCard /> */}
+          <WeightCardLine />
+          <BMICardBar />
+          <SleepCardBar />
           <br />
           <br />
           <br />
@@ -128,15 +125,6 @@ export const LandingPage = () => {
             <h3>Goal for week</h3>
             <p>42/54</p>
           </div>
-          {/* <ProductSection
-            id="product"
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-center"
-          >
-            <div className="productImage">
-              <img src={chart} alt="" />
-            </div>
-          </ProductSection> */}
           <ProductSection
             id="product"
             data-aos="fade-up"
