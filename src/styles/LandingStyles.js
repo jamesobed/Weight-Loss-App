@@ -164,9 +164,9 @@ export const ProductSectionCard = styled.div`
     /* margin-top: 25%; */
     background-color: #fff;
     height: 50px;
-    margin-right: -3%;
+    margin-right: 1%;
     padding-left: 3%;
-    padding-right: 1%;
+    padding-right: 2%;
     vertical-align: middle;
     justify-content: stretch;
     align-items: flex-end;
