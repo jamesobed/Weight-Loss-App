@@ -3,14 +3,12 @@ import Chart from "react-apexcharts";
 import { ProductSection, WorkOutCard } from "../styles/LandingStyles";
 import { Nav } from "../styles/NavbarStyles";
 import loginImg from "../assets/icon/loginImg.png";
-// import chart from "../assets/chart.png";
 import { FaSpinner } from "react-icons/fa";
 import { Footer } from "../components/Landing/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-// eslint-disable-next-line
-import UsersDashboardCard, {
+import {
   SingleCard,
   WeightCardLine,
   SleepCardBar,
@@ -19,6 +17,8 @@ import UsersDashboardCard, {
 import { AddModal } from "../components/AddModal";
 import CarouselComponent from "../components/Landing/carousel/CarouselComponent";
 export const LandingPage = () => {
+  const [activeTab, setActiveTab] = useState("");
+
   // eslint-disable-next-line
   const [active, setActive] = useState();
   // eslint-disable-next-line
@@ -161,13 +161,9 @@ export const LandingPage = () => {
           <SingleCard />
           <br />
           <br />
-          <br />
-          <br />
-          <br />
-          <br />
         </>
       )}
-      <Footer setActive={setActive} />
+      <Footer setActive={setActive} activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>
   );
 };

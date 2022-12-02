@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { FooterStyle } from "../../styles/LandingStyles";
 import { FaHome, FaWhatsapp, FaChartArea, FaPersonBooth } from "react-icons/fa";
 
-export const Footer = ({ setActive }) => {
-  const [activeTab, setActiveTab] = useState("");
+export const Footer = ({ setActive, activeTab, setActiveTab }) => {
+  // const [activeTab, setActiveTab] = useState("");
   const footerIcons = ["home", "chart", "plus", "whatsapp", "personBooth"];
 
   const handSetActive = () => {
     setActive(activeTab);
   };
+  useEffect(() => {
+    handSetActive();
+    // eslint-disable-next-line
+  }, [activeTab]);
   return (
     <FooterStyle>
       <div
@@ -33,8 +37,8 @@ export const Footer = ({ setActive }) => {
             cursor: "pointer",
           }}
           onClick={() => {
-            setActiveTab(footerIcons[0]);
             handSetActive();
+            setActiveTab(footerIcons[0]);
           }}
         >
           <FaHome
@@ -55,8 +59,8 @@ export const Footer = ({ setActive }) => {
             cursor: "pointer",
           }}
           onClick={() => {
-            setActiveTab(footerIcons[1]);
             handSetActive();
+            setActiveTab(footerIcons[1]);
           }}
         >
           <FaChartArea
