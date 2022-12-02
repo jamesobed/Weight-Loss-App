@@ -11,6 +11,7 @@ import {
   WorkOutCardi,
   ProductSectionCard,
   SingleCardStyleSmall,
+  ManagedWorkedOutStyles,
 } from "../styles/LandingStyles";
 import Button, { Button1 } from "../styles/ButtonStyles";
 
@@ -174,7 +175,13 @@ function ManagedWorkoutCard() {
             className="social-icon"
           />
         </Nav>
-
+        <ManagedWorkedOutStyles>
+          <div class="top"></div>
+          <div class="middle">
+            <h1>52,3</h1>
+          </div>
+          <div class="bottom"></div>
+        </ManagedWorkedOutStyles>
         <div className="flexTop" style={{ display: "flex", width: "100%" }}>
           <Button1
             type="submit"
@@ -266,10 +273,10 @@ function ManagedWorkoutCard() {
           type="submit"
           borderRadius="24px"
           height="80px"
-          width="90%"
+          width="70%"
           style={{
-            marginLeft: "5%",
-            marginRight: "5%",
+            marginLeft: "15%",
+            marginRight: "15%",
             marginBottom: "1.5rem",
           }}
           onClick={handleBtnClick}

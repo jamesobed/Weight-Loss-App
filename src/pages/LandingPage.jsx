@@ -113,7 +113,6 @@ export const LandingPage = () => {
           <br />
           <br />
           <WorkOutCard>
-            {/* <UsersDashboardCard /> */}
             <CarouselComponent />
           </WorkOutCard>
           <div
@@ -160,6 +159,9 @@ export const LandingPage = () => {
             <p>see all</p>
           </div>{" "}
           <SingleCard />
+          <br />
+          <br />
+          <br />
           <br />
           <br />
           <br />
