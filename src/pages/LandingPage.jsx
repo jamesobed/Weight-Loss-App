@@ -55,7 +55,7 @@ export const LandingPage = () => {
       },
       colors: ["#daf542", "#66DA26"],
       chart: {
-        id: "basic-bar",
+        id: "calories-bar",
         background: "#7769cf",
       },
       xaxis: {
@@ -95,9 +95,6 @@ export const LandingPage = () => {
           <WeightCardLine />
           <BMICardBar />
           <SleepCardBar />
-          <br />
-          <br />
-          <br />
           <br />
         </>
       ) : active === "plus" ? (
