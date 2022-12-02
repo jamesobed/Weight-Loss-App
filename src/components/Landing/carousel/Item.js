@@ -11,7 +11,7 @@ export const Item = styled.div`
   background: #fff;
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(33, 63, 125, 0.06);
-  padding: 20%;
+  padding: 25%;
   margin: 6%;
   border-radius: 26px;
 
@@ -40,5 +40,11 @@ export const Item = styled.div`
     border-radius: 50%;
     margin-bottom: 1rem;
     margin-left: 25%;
+  }
+
+  /* reduce width by 30% at width less than 500 */
+  @media (max-width: 500px) {
+    width: 70%;
+    height: 70px;
   }
 `;
