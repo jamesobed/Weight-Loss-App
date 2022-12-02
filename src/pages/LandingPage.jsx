@@ -96,6 +96,13 @@ export const LandingPage = () => {
           <BMICardBar />
           <SleepCardBar />
           <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
         </>
       ) : active === "plus" ? (
         <>
@@ -137,7 +144,7 @@ export const LandingPage = () => {
                   options={BMI.options}
                   series={BMI.series}
                   type="bar"
-                  width="100%"
+                  width="80%"
                 />
               </div>
             </div>

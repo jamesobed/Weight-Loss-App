@@ -33,8 +33,6 @@ export const Footer = ({ setActive }) => {
         <div
           className="footerMenu"
           style={{
-            display: "flex",
-            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             width: "20%",
@@ -53,19 +51,10 @@ export const Footer = ({ setActive }) => {
             }}
             className="social-icon"
           />
-          <p
-            style={{
-              color: activeTab === "home" ? "#213f7d" : "#c4c4c4",
-              fontSize: "12px",
-              fontWeight: "600",
-            }}
-          ></p>
         </div>
         <div
           className="footerMenu"
           style={{
-            display: "flex",
-            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             width: "20%",
@@ -84,19 +73,10 @@ export const Footer = ({ setActive }) => {
             }}
             className="social-icon"
           />
-          <p
-            style={{
-              color: activeTab === "chart" ? "#213f7d" : "#c4c4c4",
-              fontSize: "12px",
-              fontWeight: "600",
-            }}
-          ></p>
         </div>
         <div
           className="footerMenu"
           style={{
-            display: "flex",
-            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             width: "20%",
@@ -116,19 +96,10 @@ export const Footer = ({ setActive }) => {
             }}
             className="social-icon"
           />
-          <p
-            style={{
-              color: activeTab === "add" ? "#213f7d" : "#c4c4c4",
-              fontSize: "12px",
-              fontWeight: "600",
-            }}
-          ></p>
         </div>
         <div
           className="footerMenu"
           style={{
-            display: "flex",
-            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             width: "20%",
@@ -147,19 +118,10 @@ export const Footer = ({ setActive }) => {
             }}
             className="social-icon"
           />
-          <p
-            style={{
-              color: activeTab === "whatsapp" ? "#213f7d" : "#c4c4c4",
-              fontSize: "12px",
-              fontWeight: "600",
-            }}
-          ></p>
         </div>
         <div
           className="footerMenu"
           style={{
-            display: "flex",
-            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             width: "20%",
@@ -179,13 +141,6 @@ export const Footer = ({ setActive }) => {
             }}
             className="social-icon"
           />
-          <p
-            style={{
-              color: activeTab === "profile" ? "#213f7d" : "#c4c4c4",
-              fontSize: "12px",
-              fontWeight: "600",
-            }}
-          ></p>
         </div>
       </div>
     </FooterStyle>

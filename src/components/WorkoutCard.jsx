@@ -59,7 +59,7 @@ export const WeightCardLine = () => {
   return (
     <ProductSectionCard>
       <div className="cardContaine" style={{ width: "100%", display: "flex" }}>
-        <div style={{ width: "20%" }} className="rightText">
+        <div style={{ width: "30%" }} className="rightText">
           <div>
             <div>Weight</div>
 
@@ -74,7 +74,7 @@ export const WeightCardLine = () => {
             options={BMI.options}
             series={BMI.series}
             type="line"
-            width="100%"
+            width="70%"
           />
         </div>
       </div>
@@ -90,7 +90,7 @@ export const BMICardBar = () => {
       style={{
         borderRadius: "20px",
         width: "97%",
-        height: "150px",
+        height: "280px",
         paddingLeft: "1.5%",
       }}
     />
@@ -153,7 +153,7 @@ export const SleepCardBar = () => {
           <div>
             <div>Sleep</div>
             <h1>
-              52,3 <sub id="submal">kg</sub>{" "}
+              62<sub id="submal">h</sub> 20<sub id="submal">m</sub>
             </h1>
           </div>
         </div>
@@ -163,7 +163,7 @@ export const SleepCardBar = () => {
             options={BMI.options}
             series={BMI.series}
             type="bar"
-            width="100%"
+            width="80%"
           />
         </div>
       </div>
