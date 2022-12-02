@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { FooterStyle } from "../../styles/LandingStyles";
 import { FaHome, FaWhatsapp, FaChartArea, FaPersonBooth } from "react-icons/fa";
 
@@ -10,7 +10,8 @@ export const Footer = ({ setActive, activeTab, setActiveTab }) => {
     setActive(activeTab);
   };
   useEffect(() => {
-    handSetActive()
+    handSetActive();
+    // eslint-disable-next-line
   }, [activeTab]);
   return (
     <FooterStyle>
