@@ -19,6 +19,7 @@ import UsersDashboardCard, {
 import { AddModal } from "../components/AddModal";
 import CarouselComponent from "../components/Landing/carousel/CarouselComponent";
 export const LandingPage = () => {
+  // eslint-disable-next-line
   const [active, setActive] = useState();
   // eslint-disable-next-line
   const [BMI, setBMI] = useState({
@@ -76,6 +77,8 @@ export const LandingPage = () => {
 
   return (
     <div>
+      <AddModal active={active} />
+
       {active === "chart" ? (
         <>
           <Nav>
@@ -98,16 +101,9 @@ export const LandingPage = () => {
           <br />
           <br />
           <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
         </>
-      ) : active === "plus" ? (
-        <>
-          <AddModal />
-        </>
+      ) : active === "plasus" ? (
+        <></>
       ) : (
         <>
           <Nav>

@@ -14,7 +14,6 @@ export const Footer = ({ setActive }) => {
 
   const handSetActive = () => {
     setActive(activeTab);
-    console.log(activeTab);
   };
   return (
     <FooterStyle>
