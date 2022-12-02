@@ -17,7 +17,7 @@ export const AddModal = () => {
     document.getElementById("addIcon").style.color = "#fff";
     setTimeout(() => {
       navigate("/add");
-    }, 500);
+    }, 100);
   };
 
   const handleBtnClick = 1;

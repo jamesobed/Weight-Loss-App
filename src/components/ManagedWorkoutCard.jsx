@@ -229,7 +229,7 @@ function ManagedWorkoutCard() {
             onClick={() => {
               // eslint-disable-next-line
               document.getElementById("femalebtn").style.border =
-                "3px solid #579428";
+                "1px solid #579428";
             }}
           >
             <div
