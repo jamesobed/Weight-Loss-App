@@ -153,7 +153,7 @@ function ManagedWorkoutCard() {
           <div style={{ display: "flex" }}>
             <h1>
               {" "}
-              <Link to="/dashboard">
+              <Link to="/">
                 <FaLessThan
                   style={{
                     fontSize: "40px",
