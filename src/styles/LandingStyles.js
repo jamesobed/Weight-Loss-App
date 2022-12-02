@@ -164,8 +164,8 @@ export const ProductSectionCard = styled.div`
     /* margin-top: 25%; */
     background-color: #fff;
     height: 50px;
-    margin-right: 1%;
-    padding-left: 3%;
+    margin-right: 5%;
+    padding-left: 1%;
     padding-right: 2%;
     vertical-align: middle;
     justify-content: stretch;
@@ -258,7 +258,6 @@ export const FooterStyle = styled.div`
   }
   & .foot-nav .footerMenu .social-icon:hover {
     color: #212423;
-    width: 300px;
     transition: width 2s, height 4s;
   }
 `;
