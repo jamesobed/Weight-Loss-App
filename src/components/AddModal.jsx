@@ -49,7 +49,9 @@ export const AddModal = () => {
             className="social-icon"
             style={{ width: "46px", color: "7769cf" }}
           />
-          <h5 style={{ color: "#000" }}>Add blood pressure</h5>
+          <h5 style={{ color: "#000", fontSize: "12px" }}>
+            Add blood pressure
+          </h5>
         </div>
       </Button1>
       <Button1
@@ -76,7 +78,7 @@ export const AddModal = () => {
           }}
         >
           <FaFile id="addIcon" style={{ width: "46px", color: "7769cf" }} />
-          <h5 id="addTitle" style={{ color: "#000" }}>
+          <h5 id="addTitle" style={{ color: "#000", fontSize: "12px" }}>
             Add weight measurement
           </h5>
         </div>
@@ -104,7 +106,7 @@ export const AddModal = () => {
           }}
         >
           <FaBiking style={{ width: "46px", color: "7769cf" }} />
-          <h5 style={{ color: "#000" }}>Add Activity</h5>
+          <h5 style={{ color: "#000", fontSize: "12px" }}>Add Activity</h5>
         </div>
       </Button1>
       <Button1
@@ -130,7 +132,7 @@ export const AddModal = () => {
           }}
         >
           <FaStopwatch20 style={{ width: "46px", color: "7769cf" }} />
-          <h5 style={{ color: "#000" }}>Track my workout</h5>
+          <h5 style={{ color: "#000", fontSize: "12px" }}>Track my workout</h5>
         </div>
       </Button1>
     </AddModalStyles>
