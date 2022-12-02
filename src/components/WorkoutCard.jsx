@@ -7,6 +7,7 @@ import step2 from "../assets/step2.png";
 import {
   SingleCardStyle,
   WorkOutCardi,
+  // eslint-disable-next-line
   WorkOutCardStyles,
   ProductSectionCard,
 } from "../styles/LandingStyles";
@@ -176,8 +177,7 @@ export const BMICardBar = () => {
             <div>Sleep</div>
 
             <h1>
-              62 <sub id="submal">h</sub>{" "}
-              20 <sub id="submal">m</sub>{" "}
+              62 <sub id="submal">h</sub> 20 <sub id="submal">m</sub>{" "}
             </h1>
           </div>
         </div>
@@ -243,22 +243,21 @@ export const SleepCardBar = () => {
       data-aos-anchor-placement="top-center"
     >
       <div className="cardContaine" style={{ width: "100%", display: "flex" }}>
-        <div style={{ width: "20%" }} className="rightText">
+        <div style={{ width: "30%" }} className="rightText">
           <div>
-            <div>Weight</div>
-
+            <div>Sleep</div>
             <h1>
               52,3 <sub id="submal">kg</sub>{" "}
             </h1>
           </div>
         </div>
 
-        <div style={{ width: "70%", marginLeft: "-4%" }}>
+        <div style={{ width: "60%", marginLeft: "-4%" }}>
           <Chart
             options={BMI.options}
             series={BMI.series}
             type="bar"
-            width="100%"
+            width="100"
           />
         </div>
       </div>

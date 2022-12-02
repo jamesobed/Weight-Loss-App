@@ -1,7 +1,8 @@
+// eslint-disable-next-line
 import React, { useState } from "react";
+// eslint-disable-next-line
 import Chart from "react-apexcharts";
 import {
-  FaBicycle,
   FaPersonBooth,
   FaGgCircle,
   FaLessThan,

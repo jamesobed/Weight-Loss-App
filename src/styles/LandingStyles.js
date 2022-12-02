@@ -129,7 +129,7 @@ export const ProductSection = styled.div`
 export const ProductSectionCard = styled.div`
   background: #fff;
   margin: 3% 3%;
-  min-height: 10vh;
+  min-height: 90px;
   border-radius: 24px;
   display: flex;
   /* flex-direction: row; */
