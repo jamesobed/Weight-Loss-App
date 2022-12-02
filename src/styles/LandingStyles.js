@@ -553,3 +553,40 @@ export const ModalOverlayStyles = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 `;
+
+export const ManagedWorkedOutStyles = styled.div`
+  width: 40%;
+  margin-left: 30%;
+  margin-bottom: 5rem;
+  /* height: 100px; */
+
+  .top {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 150px;
+    background-color: #4842f5;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .middle {
+    height: 149px;
+    background-color: #4842f5;
+    margin-top: -55px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+  .bottom {
+    height: 100px;
+    background-color: #4842f5;
+    margin-top: -150px;
+    border-bottom-left-radius: 110px;
+    border-bottom-right-radius: 110px;
+  }
+
+  .middle h1 {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 800;
+  }
+`;

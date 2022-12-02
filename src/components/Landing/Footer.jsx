@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { FooterStyle } from "../../styles/LandingStyles";
-import {
-  FaHome,
-  FaWhatsapp,
-  FaChartArea,
-  FaPlus,
-  FaPersonBooth,
-} from "react-icons/fa";
+import { FaHome, FaWhatsapp, FaChartArea, FaPersonBooth } from "react-icons/fa";
 
 export const Footer = ({ setActive }) => {
   const [activeTab, setActiveTab] = useState("");
@@ -87,14 +81,25 @@ export const Footer = ({ setActive }) => {
             handSetActive();
           }}
         >
-          <FaPlus
-            style={{
-              // color: activeTab === "add" ? "#213f7d" : "#c4c4c4",
-              background: "#213f7d",
-              fontSize: "20px",
-            }}
+          <div
             className="social-icon"
-          />
+            style={{
+              color: "#fff",
+              // border: "1px solid green",
+              borderRadius: "50%",
+              textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              fontSize: "60px",
+              height: "70%",
+              width: "20%",
+              padding: "10%",
+              marginTop: "-45%",
+              background: "#7769cf",
+            }}
+          >
+            <p style={{ marginTop: "-40%" }}>+</p>
+          </div>
         </div>
         <div
           className="footerMenu"
