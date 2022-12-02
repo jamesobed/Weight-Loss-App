@@ -9,6 +9,7 @@ import { Footer } from "../components/Landing/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+// eslint-disable-next-line
 import UsersDashboardCard, {
   SingleCard,
   WeightCardLine,
@@ -16,6 +17,7 @@ import UsersDashboardCard, {
   BMICardBar,
 } from "../components/WorkoutCard";
 import { AddModal } from "../components/AddModal";
+import CarouselComponent from "../components/Landing/carousel/CarouselComponent";
 export const LandingPage = () => {
   const [active, setActive] = useState();
   // eslint-disable-next-line
@@ -110,11 +112,9 @@ export const LandingPage = () => {
           </Nav>
           <br />
           <br />
-          <br />
-          <br />
-          <br />
           <WorkOutCard>
-            <UsersDashboardCard />
+            {/* <UsersDashboardCard /> */}
+            <CarouselComponent />
           </WorkOutCard>
           <div
             className="displayText"
@@ -160,7 +160,6 @@ export const LandingPage = () => {
             <p>see all</p>
           </div>{" "}
           <SingleCard />
-          <br />
           <br />
           <br />
           <br />

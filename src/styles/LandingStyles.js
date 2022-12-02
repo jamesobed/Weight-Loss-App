@@ -260,7 +260,7 @@ export const WorkOutCardi = styled.div`
   padding: 3%;
   gap: 40px;
 
-  * #userDashboard {
+   #userDashboard {
     width: 100%;
   }
   #usercard {
