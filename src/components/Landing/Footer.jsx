@@ -7,6 +7,7 @@ import {
   FaPlus,
   FaPersonBooth,
 } from "react-icons/fa";
+
 export const Footer = ({ setActive }) => {
   const [activeTab, setActiveTab] = useState("");
   const footerIcons = ["home", "chart", "plus", "whatsapp", "personBooth"];
@@ -168,6 +169,7 @@ export const Footer = ({ setActive }) => {
             handSetActive();
           }}
         >
+          {" "}
           <FaPersonBooth
             style={{
               color: activeTab === "profile" ? "#213f7d" : "#c4c4c4",

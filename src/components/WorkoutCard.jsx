@@ -31,6 +31,7 @@ const Usercards = [
     amount: "27",
   },
 ];
+// eslint-disable-next-line
 const History = [
   {
     id: 1,
@@ -79,7 +80,7 @@ const UsersDashboardCard = () => {
     </WorkOutCardi>
   );
 };
-export const HistoryCardGraph = () => {
+export const WeightCardLine = () => {
   // eslint-disable-next-line
   const [BMI] = useState({
     options: {
@@ -160,131 +161,111 @@ export const HistoryCardGraph = () => {
     </ProductSectionCard>
   );
 };
-export const HistoryCard = () => {
+export const BMICardBar = () => {
   // eslint-disable-next-line
-  const [BMI, setBMI] = useState({
+
+  return (
+    <ProductSectionCard
+      id="product"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+    >
+      <div className="cardContaine" style={{ width: "100%", display: "flex" }}>
+        <div style={{ width: "30%" }} className="rightText">
+          <div>
+            <div>Sleep</div>
+
+            <h1>
+              62 <sub id="submal">h</sub>{" "}
+              20 <sub id="submal">m</sub>{" "}
+            </h1>
+          </div>
+        </div>
+
+        <div style={{ width: "60%", marginLeft: "-4%" }}></div>
+      </div>
+    </ProductSectionCard>
+  );
+};
+export const SleepCardBar = () => {
+  // eslint-disable-next-line
+  const [BMI] = useState({
     options: {
+      grid: {
+        show: false,
+        borderColor: "#90A4AE",
+        strokeDashArray: 0,
+        position: "back",
+        xaxis: {
+          lines: {
+            show: false,
+          },
+        },
+        yaxis: {
+          lines: {
+            show: false,
+          },
+        },
+        row: {
+          colors: undefined,
+          opacity: 0.5,
+        },
+        column: {
+          colors: undefined,
+          opacity: 0.5,
+        },
+        padding: {
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 30,
+        },
+      },
+      colors: ["#6d3e9c", "#847196"],
       chart: {
         id: "basic-bar",
       },
       xaxis: {
-        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+        categories: ["t", "w", "t", "f", "s", "s", "m"],
       },
     },
     series: [
       {
         name: "series-1",
-        data: [30, 40, 45, 50, 49, 60, 70, 91],
+        data: [600, 1000, 400, 600, 900, 500, 200],
       },
     ],
   });
   return (
-    <WorkOutCardStyles
-      id="usersDashboard"
-      className="pt-5 pb-3 px-2 d-grid d-sm-flex justify-content-between"
+    <ProductSectionCard
+      id="product"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
     >
-      {History &&
-        History.map((usercard) => {
-          return (
-            <div id="usercard" className="py-3 px-3" key={usercard.id}>
-              <div style={{ width: "50%" }}>
-                <img
-                  src={usercard.icon}
-                  alt=""
-                  style={{
-                    width: "100%",
-                    objectFit: "contain",
-                    margin: "0.03%",
-                  }}
-                />
-              </div>
-            </div>
-          );
-        })}
-    </WorkOutCardStyles>
+      <div className="cardContaine" style={{ width: "100%", display: "flex" }}>
+        <div style={{ width: "20%" }} className="rightText">
+          <div>
+            <div>Weight</div>
+
+            <h1>
+              52,3 <sub id="submal">kg</sub>{" "}
+            </h1>
+          </div>
+        </div>
+
+        <div style={{ width: "70%", marginLeft: "-4%" }}>
+          <Chart
+            options={BMI.options}
+            series={BMI.series}
+            type="bar"
+            width="100%"
+          />
+        </div>
+      </div>
+    </ProductSectionCard>
   );
 };
-export const WeightCard = () => {
-  return (
-    <WorkOutCardStyles
-      id="usersDashboard"
-      className="pt-5 pb-3 px-2 d-grid d-sm-flex justify-content-between"
-    >
-      {Usercards &&
-        Usercards.map((usercard) => {
-          return (
-            <div id="usercard" className="py-3 px-3" key={usercard.id}>
-              <div style={{ width: "50%" }}>
-                <img
-                  src={usercard.icon}
-                  alt=""
-                  style={{
-                    width: "100%",
-                    objectFit: "contain",
-                    margin: "0.03%",
-                  }}
-                />
-              </div>
-            </div>
-          );
-        })}
-    </WorkOutCardStyles>
-  );
-};
-export const SleepCard = () => {
-  return (
-    <WorkOutCardStyles
-      id="usersDashboard"
-      className="pt-5 pb-3 px-2 d-grid d-sm-flex justify-content-between"
-    >
-      {Usercards &&
-        Usercards.map((usercard) => {
-          return (
-            <div id="usercard" className="py-3 px-3" key={usercard.id}>
-              <div style={{ width: "50%" }}>
-                <img
-                  src={usercard.icon}
-                  alt=""
-                  style={{
-                    width: "100%",
-                    objectFit: "contain",
-                    margin: "0.03%",
-                  }}
-                />
-              </div>
-            </div>
-          );
-        })}
-    </WorkOutCardStyles>
-  );
-};
-export const BMICard = () => {
-  return (
-    <WorkOutCardStyles
-      id="usersDashboard"
-      className="pt-5 pb-3 px-2 d-grid d-sm-flex justify-content-between"
-    >
-      {Usercards &&
-        Usercards.map((usercard) => {
-          return (
-            <div id="usercard" className="py-3 px-3" key={usercard.id}>
-              <div style={{ width: "50%" }}>
-                <img
-                  src={usercard.icon}
-                  alt=""
-                  style={{
-                    width: "100%",
-                    objectFit: "contain",
-                    margin: "0.03%",
-                  }}
-                />
-              </div>
-            </div>
-          );
-        })}
-    </WorkOutCardStyles>
-  );
-};
+
 export const SingleCard = () => {
   return (
     <SingleCardStyle

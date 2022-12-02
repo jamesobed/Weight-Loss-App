@@ -152,7 +152,7 @@ export const ProductSectionCard = styled.div`
     background-color: #fff;
     height: 100%;
     margin-right: -3%;
-    padding-left: 4%;
+    padding-left: 3%;
     padding-right: 1%;
     vertical-align: middle;
     justify-content: stretch;
@@ -235,7 +235,7 @@ export const FooterStyle = styled.div`
     margin: auto;
     padding: 2%;
     margin: 0% 0;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   & .foot-nav .footerMenu .social-icon {
@@ -404,6 +404,15 @@ export const SingleCardStyle = styled.div`
       font-weight: 600;
       font-family: "Work Sans", sans-serif;
     }
+    h2 {
+      color: #213f7d;
+      display: flex;
+      width: 100%;
+      margin-left: 40%;
+      margin-right: 50%;
+      font-weight: 600;
+      font-family: "Work Sans", sans-serif;
+    }
   }
   @media (max-width: 468px) {
     padding-left: 5%;
@@ -439,6 +448,63 @@ export const SingleCardStyle = styled.div`
   @media (min-width: 768px) {
     .body-pd {
       padding-left: calc(var(--sidenav-width) + 2rem);
+    }
+  }
+
+  & #usercard .social-icon {
+    width: 306px;
+    height: 46px;
+  }
+`;
+export const SingleCardStyleSmall = styled.div`
+  padding: 7%;
+
+  #userDashboard {
+    width: 100%;
+  }
+  #usercard {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    min-width: 22%;
+    word-wrap: break-word;
+    /* background-color: #fff; */
+    background-clip: border-box;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    justify-content: center;
+    align-items: center;
+    width: "100%";
+    p {
+      color: #213f7d;
+      display: flex;
+      width: 100%;
+      margin-left: 50%;
+      margin-right: 50%;
+      font-weight: 600;
+      font-family: "Work Sans", sans-serif;
+    }
+  }
+  @media (max-width: 468px) {
+    padding-left: 5%;
+    padding-right: 5%;
+
+    #usersDashboard {
+      width: 100%;
+      background-color: #fff;
+      display: grid;
+      grid-template-columns: 47% 47%;
+      #usercard {
+        margin-bottom: 1rem;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      width: 40%;
+      margin-left: 3%;
+      margin-right: 50%;
     }
   }
 
