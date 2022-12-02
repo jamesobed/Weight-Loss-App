@@ -147,10 +147,23 @@ export const ProductSectionCard = styled.div`
     height: 100%;
   }
 
+  & .cardImagContaine {
+    /* margin-top: 25%; */
+    background-color: #fff;
+    height: 50px;
+    margin-right: 3%;
+    padding-left: 3%;
+    padding-right: 1%;
+    vertical-align: middle;
+    justify-content: stretch;
+    align-items: flex-end;
+    text-align: right;
+    z-index: 10;
+  }
   & .cardContaine .rightText {
     /* margin-top: 25%; */
     background-color: #fff;
-    height: 100%;
+    height: 50px;
     margin-right: -3%;
     padding-left: 3%;
     padding-right: 1%;
@@ -260,7 +273,7 @@ export const WorkOutCardi = styled.div`
   padding: 3%;
   gap: 40px;
 
-   #userDashboard {
+  #userDashboard {
     width: 100%;
   }
   #usercard {

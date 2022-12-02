@@ -1,86 +1,9 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
 import { FaPlay, FaBiking } from "react-icons/fa";
-import step1 from "../assets/step1.png";
-import stp3 from "../assets/stp3.png";
-import step2 from "../assets/step2.png";
-import {
-  SingleCardStyle,
-  WorkOutCardi,
-  // eslint-disable-next-line
-  WorkOutCardStyles,
-  ProductSectionCard,
-} from "../styles/LandingStyles";
+import bmi from "../assets/bmi.png";
+import { SingleCardStyle, ProductSectionCard } from "../styles/LandingStyles";
 
-const Usercards = [
-  //   {
-  //     id: 1,
-  //     icon: step1,
-  //     caption: "Users",
-  //     amount: "7 579",
-  //   },
-  {
-    id: 2,
-    icon: step2,
-    caption: "Active Users",
-    amount: "866",
-  },
-  {
-    id: 3,
-    icon: stp3,
-    caption: "Active Users",
-    amount: "27",
-  },
-];
-// eslint-disable-next-line
-const History = [
-  {
-    id: 1,
-    icon: step1,
-    caption: "Users",
-    amount: "7 579",
-  },
-  {
-    id: 2,
-    icon: step2,
-    caption: "Active Users",
-    amount: "866",
-  },
-  {
-    id: 3,
-    icon: stp3,
-    caption: "Active Users",
-    amount: "27",
-  },
-];
-
-const UsersDashboardCard = () => {
-  return (
-    <WorkOutCardi
-      id="usersDashboard"
-      className="pt-5 pb-3 px-2 d-grid d-sm-flex justify-content-between"
-    >
-      {Usercards &&
-        Usercards.map((usercard) => {
-          return (
-            <div id="usercard" className="py-3 px-3" key={usercard.id}>
-              <div style={{ width: "50%" }}>
-                <img
-                  src={usercard.icon}
-                  alt=""
-                  style={{
-                    width: "100%",
-                    objectFit: "contain",
-                    margin: "0.03%",
-                  }}
-                />
-              </div>
-            </div>
-          );
-        })}
-    </WorkOutCardi>
-  );
-};
 export const WeightCardLine = () => {
   // eslint-disable-next-line
   const [BMI] = useState({
@@ -134,11 +57,7 @@ export const WeightCardLine = () => {
     ],
   });
   return (
-    <ProductSectionCard
-      id="product"
-      data-aos="fade-up"
-      data-aos-anchor-placement="top-center"
-    >
+    <ProductSectionCard>
       <div className="cardContaine" style={{ width: "100%", display: "flex" }}>
         <div style={{ width: "20%" }} className="rightText">
           <div>
@@ -163,28 +82,18 @@ export const WeightCardLine = () => {
   );
 };
 export const BMICardBar = () => {
-  // eslint-disable-next-line
-
   return (
-    <ProductSectionCard
-      id="product"
-      data-aos="fade-up"
-      data-aos-anchor-placement="top-center"
-    >
-      <div className="cardContaine" style={{ width: "100%", display: "flex" }}>
-        <div style={{ width: "30%" }} className="rightText">
-          <div>
-            <div>Sleep</div>
-
-            <h1>
-              62 <sub id="submal">h</sub> 20 <sub id="submal">m</sub>{" "}
-            </h1>
-          </div>
-        </div>
-
-        <div style={{ width: "60%", marginLeft: "-4%" }}></div>
-      </div>
-    </ProductSectionCard>
+    <img
+      className="cardImagContaine"
+      src={bmi}
+      alt=""
+      style={{
+        borderRadius: "20px",
+        width: "97%",
+        height: "150px",
+        paddingLeft: "1.5%",
+      }}
+    />
   );
 };
 export const SleepCardBar = () => {
@@ -192,8 +101,8 @@ export const SleepCardBar = () => {
   const [BMI] = useState({
     options: {
       grid: {
-        show: false,
-        borderColor: "#90A4AE",
+        show: true,
+        borderColor: "#fff",
         strokeDashArray: 0,
         position: "back",
         xaxis: {
@@ -218,12 +127,13 @@ export const SleepCardBar = () => {
           top: 0,
           right: 0,
           bottom: 0,
-          left: 30,
+          left: 20,
         },
       },
       colors: ["#6d3e9c", "#847196"],
       chart: {
-        id: "basic-bar",
+        id: "sleep-bar",
+        background: "#fff",
       },
       xaxis: {
         categories: ["t", "w", "t", "f", "s", "s", "m"],
@@ -237,11 +147,7 @@ export const SleepCardBar = () => {
     ],
   });
   return (
-    <ProductSectionCard
-      id="product"
-      data-aos="fade-up"
-      data-aos-anchor-placement="top-center"
-    >
+    <ProductSectionCard>
       <div className="cardContaine" style={{ width: "100%", display: "flex" }}>
         <div style={{ width: "30%" }} className="rightText">
           <div>
@@ -257,7 +163,7 @@ export const SleepCardBar = () => {
             options={BMI.options}
             series={BMI.series}
             type="bar"
-            width="100"
+            width="100%"
           />
         </div>
       </div>
@@ -292,5 +198,3 @@ export const SingleCard = () => {
     </SingleCardStyle>
   );
 };
-
-export default UsersDashboardCard;
