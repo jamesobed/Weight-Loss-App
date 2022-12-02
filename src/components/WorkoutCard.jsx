@@ -272,9 +272,22 @@ export const SingleCard = () => {
       className="pt-5 pb-3 px-2 d-grid d-sm-flex justify-content-between"
     >
       <div id="usercard" className="py-3 px-3">
-        <FaBiking className="social-icon" />
+        <FaBiking className="social-icon" style={{ color: "#847196" }} />
         <h3>Muscle Builder</h3>
-        <FaPlay className="social-icon" />
+
+        <FaPlay
+          className="social-icon"
+          style={{
+            color: "lightseagreen",
+            border: "1px solid green",
+            borderRadius: "50%",
+            textAlign: "center",
+            height: "20%",
+            width: "20%",
+            padding: "2%",
+            margin: "2%",
+          }}
+        />
       </div>
     </SingleCardStyle>
   );
