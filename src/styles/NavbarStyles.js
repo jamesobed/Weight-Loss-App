@@ -15,8 +15,8 @@ export const Wrapper = styled.div`
   } */
 
   & .nav-img {
-    width: 60px;
-    height: 50px;
+    width: 40px;
+    height: 30px;
     margin: 0 0 0 2%;
     border-radius: 50%;
   }
@@ -34,8 +34,8 @@ export const Nav = styled.div`
   margin-top: 2rem;
 
   & .nav-img {
-    width: 100px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     margin: 0 0 0 2%;
     border-radius: 50%;
   }
