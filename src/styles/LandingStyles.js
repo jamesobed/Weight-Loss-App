@@ -440,7 +440,7 @@ export const SingleCardStyle = styled.div`
   #usercard {
     display: flex;
     flex-direction: row;
-    height: 150px;
+    height: 250px;
     min-width: 22%;
     word-wrap: break-word;
     background-color: #fff;
@@ -451,15 +451,6 @@ export const SingleCardStyle = styled.div`
     justify-content: center;
     align-items: center;
 
-    h3 {
-      color: #213f7d;
-      display: flex;
-      width: 40%;
-      margin-left: 5%;
-      margin-right: 60%;
-      font-weight: 600;
-      font-family: "Work Sans", sans-serif;
-    }
     h2 {
       color: #213f7d;
       display: flex;
@@ -482,19 +473,6 @@ export const SingleCardStyle = styled.div`
       #usercard {
         margin-bottom: 1rem;
       }
-    }
-    th {
-      font-size: 12px;
-      align-items: center;
-      img {
-        display: none;
-      }
-    }
-    h3 {
-      font-weight: 400;
-      width: 40%;
-      margin-left: 3%;
-      margin-right: 50%;
     }
   }
 

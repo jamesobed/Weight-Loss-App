@@ -172,8 +172,8 @@ function ManagedWorkoutCard() {
           className="flexBottom"
           style={{ display: "flex", width: "100%", marginTop: "-3.8rem" }}
         >
-          <SingleCardSet input={[21, 300, "Age"]} />
-          <SingleCardSet input={[173, 300, "Height"]} />
+          <SingleCardSet input={[21, 400, "Age"]} />
+          <SingleCardSet input={[173, 400, "Height"]} />
         </div>
         <Button
           type="submit"
@@ -181,9 +181,10 @@ function ManagedWorkoutCard() {
           height="80px"
           width="70%"
           style={{
+            marginTop: "-19%",
             marginLeft: "15%",
             marginRight: "15%",
-            marginBottom: "1.5rem",
+            marginBottom: "5%",
           }}
           onClick={handleBtnClick}
         >
