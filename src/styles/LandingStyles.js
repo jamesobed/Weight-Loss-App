@@ -24,35 +24,6 @@ export const Hero = styled.div`
       }
     }
   }
-  & .heroText {
-    width: 45%;
-    flex-direction: column;
-    display: flex;
-
-    & p {
-      font-size: 4rem;
-      font-weight: bolder;
-      background: linear-gradient(to right, #de3d6d, #f5844c);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: 2px;
-      line-height: 1.3;
-
-      margin: 0%;
-    }
-    & small {
-      color: #03435f;
-      margin: 5% 0%;
-      font-weight: lighter;
-      line-height: 24px;
-      letter-spacing: 1px;
-      font-size: 1rem;
-    }
-
-    @media (max-width: 1024px) {
-      width: 100%;
-    }
-  }
 
   & .heroImage {
     align-self: end;
@@ -123,6 +94,75 @@ export const ProductSection = styled.div`
       justify-content: center;
       width: 100%;
       margin-bottom: 0%;
+    }
+  }
+`;
+export const BMISectionCard = styled.div`
+  background: linear-gradient(to right, #fff, #fff);
+  margin: 3% 3%;
+  min-height: 10vh;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 94%;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  color: #03435f;
+  justify-content: center;
+  align-items: center;
+
+  & .mainCardContaine .cardContaine {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* display: none; */
+  }
+  & .title {
+    display: flex;
+    width: 96%;
+    justify-content: space-evenly;
+    margin-top: 1%;
+  }
+  & .titleCircle {
+    display: flex;
+    width: 96%;
+    justify-content: space-evenly;
+    margin-top: -3%;
+    margin-bottom: 1%;
+  }
+  & .titleNumber {
+    position: absolute;
+    display: flex;
+    width: 96%;
+    justify-content: space-evenly;
+    margin-top: 3%;
+  }
+  & .titleCircle h3 {
+    margin-right: 3%;
+  }
+  & .titleCircle .circle {
+    width: 3%;
+    background: green;
+    border-radius: 50%;
+    height: 30px;
+    margin-top: 1%;
+    margin-right: 1%;
+  }
+
+  & .mainCardContaine .cardContaine .orange {
+    position: absolute;
+    width: 23%;
+    height: 15px;
+    border-radius: 5px;
+    /* margin: 1%; */
+    /* margin-top: 1%; */
+  }
+  @media (max-width: 280px) {
+    & .productDescription {
+      & h2 {
+        font-weight: 600;
+        font-size: 2rem;
+      }
     }
   }
 `;
@@ -240,7 +280,7 @@ export const FooterStyle = styled.div`
   text-align: center;
   color: #3c3c40;
   font-weight: lighter;
-  & .footerMenu {
+  & .foot-nav .footerMenu {
     display: flex;
     /* gap: 25px; */
     list-style-type: none;
@@ -249,6 +289,11 @@ export const FooterStyle = styled.div`
     padding: 2%;
     margin: 0% 0;
     justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 60px;
+    cursor: pointer;
   }
 
   & .foot-nav .footerMenu .social-icon {
@@ -261,7 +306,7 @@ export const FooterStyle = styled.div`
     transition: width 2s, height 4s;
   }
 `;
-//
+//CARD SECTION ===============================================
 export const WorkOutCardi = styled.div`
   // make my display grid and scroll in row
   display: grid;
@@ -293,7 +338,6 @@ export const WorkOutCardi = styled.div`
     h2 {
       color: #213f7d;
       font-weight: 600;
-      font-family: "Work Sans", sans-serif;
     }
   }
   @media (max-width: 768px) {
@@ -396,7 +440,7 @@ export const SingleCardStyle = styled.div`
   #usercard {
     display: flex;
     flex-direction: row;
-    height: 150px;
+    height: 250px;
     min-width: 22%;
     word-wrap: break-word;
     background-color: #fff;
@@ -407,15 +451,6 @@ export const SingleCardStyle = styled.div`
     justify-content: center;
     align-items: center;
 
-    h3 {
-      color: #213f7d;
-      display: flex;
-      width: 40%;
-      margin-left: 5%;
-      margin-right: 60%;
-      font-weight: 600;
-      font-family: "Work Sans", sans-serif;
-    }
     h2 {
       color: #213f7d;
       display: flex;
@@ -438,19 +473,6 @@ export const SingleCardStyle = styled.div`
       #usercard {
         margin-bottom: 1rem;
       }
-    }
-    th {
-      font-size: 12px;
-      align-items: center;
-      img {
-        display: none;
-      }
-    }
-    h3 {
-      font-weight: 400;
-      width: 40%;
-      margin-left: 3%;
-      margin-right: 50%;
     }
   }
 
@@ -560,27 +582,18 @@ export const ManagedWorkedOutStyles = styled.div`
   margin-bottom: 5rem;
   /* height: 100px; */
 
-  .top {
+  .middle {
+    height: 280px;
+    background-color: #7769cf;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    height: 150px;
-    background-color: #4842f5;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-  .middle {
-    height: 149px;
-    background-color: #4842f5;
-    margin-top: -55px;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-  }
-  .bottom {
-    height: 100px;
-    background-color: #4842f5;
-    margin-top: -150px;
-    border-bottom-left-radius: 110px;
-    border-bottom-right-radius: 110px;
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+    z-index: 1000;
   }
 
   .middle h1 {
@@ -588,5 +601,27 @@ export const ManagedWorkedOutStyles = styled.div`
     text-align: center;
     margin-top: 50px;
     font-weight: 800;
+  }
+  @media (max-width: 850px) {
+    .middle {
+      height: 200px;
+
+      border-bottom-left-radius: 80px;
+      border-bottom-right-radius: 80px;
+    }
+  }
+  @media (max-width: 588px) {
+    .middle {
+      height: 150px;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+  }
+  @media (max-width: 408px) {
+    .middle {
+      height: 100px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
   }
 `;

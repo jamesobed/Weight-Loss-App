@@ -1,10 +1,15 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
 import "./Styles.css";
-import { Item } from "./Item";
+import { Item, ItemDiv } from "./Item";
 import step1 from "../../../assets/step1.png";
 import stp3 from "../../../assets/stp3.png";
 import step2 from "../../../assets/step2.png";
+const caroselArray = [
+  60, 60, 60, 60, 150, 60, 60, 60, 60, 150, 60, 60, 60, 60, 150, 60, 60, 60, 60,
+  150, 60, 60, 60, 60, 150, 60, 60, 60, 60, 150, 60, 60, 60, 60, 150, 60, 60,
+  60, 60, 150, 60, 60, 60, 60, 150, 60, 60, 60, 60, 150,
+];
 
 const CarouselData = [
   {
@@ -30,18 +35,24 @@ const CarouselData = [
   },
 ];
 
-const breakPoints = [
+const breakPoint = [
   { width: 1, itemsToShow: 1 },
   { width: 500, itemsToShow: 2 },
   { width: 768, itemsToShow: 2 },
   { width: 1280, itemsToShow: 2 },
   { width: 1000, itemsToShow: 2 },
 ];
-
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 500, itemsToShow: 20 },
+  { width: 768, itemsToShow: 20 },
+  { width: 1280, itemsToShow: 20 },
+  { width: 1000, itemsToShow: 20 },
+];
 const CarouselComponent = () => {
   return (
     <Carousel
-      breakPoints={breakPoints}
+      breakPoints={breakPoint}
       pagination={false}
       className="carousel-root"
     >
@@ -55,6 +66,36 @@ const CarouselComponent = () => {
             <img src={item.icon} alt="" className="img" />
           </div>
         </Item>
+      ))}
+    </Carousel>
+  );
+};
+export const BarCarouselComponent = () => {
+  return (
+    <Carousel
+      breakPoints={breakPoints}
+      pagination={false}
+      className="carousel-root"
+      style={{
+        background: "#fef",
+        height: "450px",
+        marginTop: "-250px",
+        justifyContent: "center",
+        borderTopLeftRadius: "30px",
+        borderTopRightRadius: "30px",
+        borderBottomLeftRadius: "90px",
+        borderBottomRightRadius: "90px",
+        zIndex: "-10",
+        opacity: "0.5",
+      }}
+    >
+      {caroselArray.map((item, index) => (
+        <ItemDiv key={index} className="item-div">
+          <div
+            className="usercardi"
+            style={{ width: "2%", height: `${item}px` }}
+          ></div>
+        </ItemDiv>
       ))}
     </Carousel>
   );

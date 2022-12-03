@@ -1,117 +1,18 @@
 // eslint-disable-next-line
 import React, { useState } from "react";
+import { BarCarouselComponent } from "../components/Landing/carousel/CarouselComponent";
+
 // eslint-disable-next-line
 import Chart from "react-apexcharts";
 import { FaPersonBooth, FaGgCircle, FaLessThan } from "react-icons/fa";
 import { Nav } from "../styles/NavbarStyles";
 import { Link, useNavigate } from "react-router-dom";
-
 import {
   SingleCardStyle,
-  WorkOutCardi,
-  ProductSectionCard,
-  SingleCardStyleSmall,
   ManagedWorkedOutStyles,
 } from "../styles/LandingStyles";
 import Button, { Button1 } from "../styles/ButtonStyles";
 
-export const UsersDashboardCard = () => {
-  return (
-    <WorkOutCardi id="usersDashboard">
-      <div id="usercard" className="py-3 px-3">
-        <div style={{ width: "50%" }}></div>
-      </div>
-    </WorkOutCardi>
-  );
-};
-export const WeightCardLine = () => {
-  // eslint-disable-next-line
-
-  return (
-    <ProductSectionCard
-      id="product"
-      data-aos="fade-up"
-      data-aos-anchor-placement="top-center"
-    >
-      <div className="cardContaine" style={{ width: "100%", display: "flex" }}>
-        <div style={{ width: "20%" }} className="rightText">
-          <div>
-            <div>Weight</div>
-
-            <h1>
-              52,3 <sub id="submal">kg</sub>{" "}
-            </h1>
-          </div>
-        </div>
-
-        <div style={{ width: "70%", marginLeft: "-4%" }}></div>
-      </div>
-    </ProductSectionCard>
-  );
-};
-export const BMICardBar = () => {
-  // eslint-disable-next-line
-
-  return (
-    <ProductSectionCard
-      id="product"
-      data-aos="fade-up"
-      data-aos-anchor-placement="top-center"
-    >
-      <div className="cardContaine" style={{ width: "100%", display: "flex" }}>
-        <div style={{ width: "20%" }} className="rightText">
-          <div>
-            <div>Weight</div>
-
-            <h1>
-              52,3 <sub id="submal">kg</sub>{" "}
-            </h1>
-          </div>
-        </div>
-
-        <div style={{ width: "70%", marginLeft: "-4%" }}></div>
-      </div>
-    </ProductSectionCard>
-  );
-};
-export const SleepCardBar = () => {
-  // eslint-disable-next-line
-  return (
-    <ProductSectionCard
-      id="product"
-      data-aos="fade-up"
-      data-aos-anchor-placement="top-center"
-    >
-      <div className="cardContaine" style={{ width: "100%", display: "flex" }}>
-        <div style={{ width: "20%" }} className="rightText">
-          <div>
-            <div>Weight</div>
-
-            <h1>
-              52,3 <sub id="submal">kg</sub>{" "}
-            </h1>
-          </div>
-        </div>
-
-        <div style={{ width: "70%", marginLeft: "-4%" }}></div>
-      </div>
-    </ProductSectionCard>
-  );
-};
-
-export const SingleCard = ({ input }) => {
-  return (
-    <SingleCardStyleSmall id="usersDashboard" style={{ width: "100%" }}>
-      <div
-        id="usercard"
-        className="py-3 px-3"
-        style={{ backgroundColor: `#${input[1]}` }}
-      >
-        <p style={{ color: `#${input[2]}` }}>{input[0]}</p>
-      </div>
-    </SingleCardStyleSmall>
-  );
-};
 export const SingleCardSet = ({ input }) => {
   return (
     <SingleCardStyle
@@ -175,13 +76,17 @@ function ManagedWorkoutCard() {
             className="social-icon"
           />
         </Nav>
+
         <ManagedWorkedOutStyles>
-          <div class="top"></div>
-          <div class="middle">
+          <div className="middle">
             <h1>52,3</h1>
           </div>
-          <div class="bottom"></div>
         </ManagedWorkedOutStyles>
+        <br />
+        <br />
+        <BarCarouselComponent />
+        <br />
+        <br />
         <div className="flexTop" style={{ display: "flex", width: "100%" }}>
           <Button1
             type="submit"
@@ -261,13 +166,14 @@ function ManagedWorkoutCard() {
             </div>
           </Button1>
         </div>
-
+        <br />
+        <br />
         <div
           className="flexBottom"
           style={{ display: "flex", width: "100%", marginTop: "-3.8rem" }}
         >
-          <SingleCardSet input={[21, 300, "Age"]} />
-          <SingleCardSet input={[173, 300, "Height"]} />
+          <SingleCardSet input={[21, 400, "Age"]} />
+          <SingleCardSet input={[173, 400, "Height"]} />
         </div>
         <Button
           type="submit"
@@ -275,9 +181,10 @@ function ManagedWorkoutCard() {
           height="80px"
           width="70%"
           style={{
+            marginTop: "-19%",
             marginLeft: "15%",
             marginRight: "15%",
-            marginBottom: "1.5rem",
+            marginBottom: "5%",
           }}
           onClick={handleBtnClick}
         >

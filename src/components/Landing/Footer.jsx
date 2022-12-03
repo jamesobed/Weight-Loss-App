@@ -29,13 +29,6 @@ export const Footer = ({ setActive, activeTab, setActiveTab }) => {
       >
         <div
           className="footerMenu"
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            width: "20%",
-            height: "60px",
-            cursor: "pointer",
-          }}
           onClick={() => {
             handSetActive();
             setActiveTab(footerIcons[0]);
@@ -51,13 +44,6 @@ export const Footer = ({ setActive, activeTab, setActiveTab }) => {
         </div>
         <div
           className="footerMenu"
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            width: "20%",
-            height: "60px",
-            cursor: "pointer",
-          }}
           onClick={() => {
             handSetActive();
             setActiveTab(footerIcons[1]);
@@ -73,13 +59,6 @@ export const Footer = ({ setActive, activeTab, setActiveTab }) => {
         </div>
         <div
           className="footerMenu"
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            width: "20%",
-            height: "60px",
-            cursor: "pointer",
-          }}
           onClick={() => {
             setActiveTab(footerIcons[2]);
             handSetActive();
@@ -107,13 +86,6 @@ export const Footer = ({ setActive, activeTab, setActiveTab }) => {
         </div>
         <div
           className="footerMenu"
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            width: "20%",
-            height: "60px",
-            cursor: "pointer",
-          }}
           onClick={() => {
             setActiveTab(footerIcons[3]);
             handSetActive();
@@ -129,13 +101,6 @@ export const Footer = ({ setActive, activeTab, setActiveTab }) => {
         </div>
         <div
           className="footerMenu"
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            width: "20%",
-            height: "60px",
-            cursor: "pointer",
-          }}
           onClick={() => {
             setActiveTab(footerIcons[4]);
             handSetActive();
