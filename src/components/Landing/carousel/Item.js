@@ -48,3 +48,43 @@ export const Item = styled.div`
     height: 70px;
   }
 `;
+export const ItemDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 16px;
+  /* gap: 24px; */
+  width: 95%;
+  height: 100px;
+  /* background: #; */
+  /* box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04); */
+  /* border: 1px solid rgba(33, 63, 125, 0.06); */
+  padding: 25%;
+  margin: 6%;
+  border-radius: 26px;
+
+  .usercardi {
+    display: flex;
+    flex-direction: column;
+    /* height: 150px; */
+    min-width: 50%;
+    word-wrap: break-word;
+    background-color: #8145d6;
+    background-clip: border-box;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    background-image: ${({ index }) =>
+      index % 5 === 0
+        ? "linear-gradient(to right, #8145d6, #8145d6)"
+        : "linear-gradient(to right, #8145d6,#8145d6)"};
+
+    border-radius: 16px;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    justify-content: center;
+    align-items: center;
+    /* padding: 6%; */
+  } /* reduce width by 30% at width less than 500 */
+  @media (max-width: 500px) {
+    width: 70%;
+    height: 70px;
+  }
+`;

@@ -163,7 +163,11 @@ export const LandingPage = () => {
           <br />
         </>
       )}
-      <Footer setActive={setActive} activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Footer
+        setActive={setActive}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
     </div>
   );
 };

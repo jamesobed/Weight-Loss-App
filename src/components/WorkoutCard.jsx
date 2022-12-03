@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
-import { FaPlay, FaBiking } from "react-icons/fa";
-import bmi from "../assets/bmi.png";
-import { SingleCardStyle, ProductSectionCard } from "../styles/LandingStyles";
+import { FaPlay, FaBiking, FaExclamationTriangle } from "react-icons/fa";
+// import bmi from "../assets/bmi.png";
+import {
+  SingleCardStyle,
+  BMISectionCard,
+  ProductSectionCard,
+} from "../styles/LandingStyles";
 
 export const WeightCardLine = () => {
   // eslint-disable-next-line
@@ -83,17 +87,76 @@ export const WeightCardLine = () => {
 };
 export const BMICardBar = () => {
   return (
-    <img
-      className="cardImagContaine"
-      src={bmi}
-      alt=""
-      style={{
-        borderRadius: "20px",
-        width: "97%",
-        height: "280px",
-        paddingLeft: "1.5%",
-      }}
-    />
+    <BMISectionCard>
+      <div
+        className="title"
+        style={{
+          display: "flex",
+          width: "96%",
+          justifyContent: "space-between",
+        }}
+      >
+        <h3>BMI</h3>
+        <h4>
+          17.3
+          <FaExclamationTriangle
+            className="social-icon"
+            style={{
+              color: "#7769cf",
+              height: "30%",
+              width: "30%",
+              margin: "2%",
+            }}
+          />{" "}
+        </h4>
+      </div>
+      <div
+        className="mainCardContaine"
+        style={{ width: "100%", display: "flex", height: "230px" }}
+      >
+        <div className="cardContaine">
+          <div
+            className="orange"
+            style={{
+              backgroundColor: " #f6eb13",
+            }}
+          ></div>
+          <div
+            className="orange"
+            style={{
+              backgroundColor: " #82898b",
+              marginLeft: "35%",
+            }}
+          ></div>
+          <div
+            className="orange"
+            style={{
+              backgroundColor: " #dde3e4",
+              marginLeft: "70%",
+            }}
+          ></div>
+        </div>
+      </div>
+      <div className="titleNumber">
+        <h3>18.5</h3>
+        <h3>25</h3>
+      </div>
+      <div
+        className="titleCircle"
+        style={{
+          display: "flex",
+          width: "96%",
+          justifyContent: "flex-start",
+        }}
+      >
+        <div className="circle" style={{ backgroundColor: "#f7f307" }}></div>
+        <h3>Low</h3>
+        <div className="circle" style={{ backgroundColor: "#978fb8" }}></div>
+        <h3>Normal</h3>
+        <div className="circle" style={{ backgroundColor: "#6f37bd" }}></div>
+        <h3>High</h3>
+      </div>
+    </BMISectionCard>
   );
 };
 export const SleepCardBar = () => {
